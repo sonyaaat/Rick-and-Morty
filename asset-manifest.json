@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/Rick-and-Morty/static/css/main.7acaea2f.css",
-    "main.js": "/Rick-and-Morty/static/js/main.e627de9c.js",
-    "index.html": "/Rick-and-Morty/index.html",
-    "main.7acaea2f.css.map": "/Rick-and-Morty/static/css/main.7acaea2f.css.map",
-    "main.e627de9c.js.map": "/Rick-and-Morty/static/js/main.e627de9c.js.map"
+    "main.css": "/react-homework-template/static/css/main.e8a619a7.css",
+    "main.js": "/react-homework-template/static/js/main.356dadfe.js",
+    "static/media/logo.png": "/react-homework-template/static/media/logo.fdb72745f596ac4a045d.png",
+    "index.html": "/react-homework-template/index.html",
+    "static/media/sprite.svg": "/react-homework-template/static/media/sprite.2f74a9b51a5de46b78d2d6151a3a70cc.svg",
+    "main.e8a619a7.css.map": "/react-homework-template/static/css/main.e8a619a7.css.map",
+    "main.356dadfe.js.map": "/react-homework-template/static/js/main.356dadfe.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.e627de9c.js"
+    "static/css/main.e8a619a7.css",
+    "static/js/main.356dadfe.js"
   ]
 }

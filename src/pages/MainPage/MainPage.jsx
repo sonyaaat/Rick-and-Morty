@@ -5,7 +5,7 @@ import sprite from '../../img/sprite.svg';
 import { useEffect, useState } from 'react';
 import LoginPage from 'pages/LoginPage/LoginPage';
 const MainPage = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('loggedIn') ? localStorage.getItem('loggedIn') : false);
   const [search, setSearch] = useState(
     localStorage.getItem('search') ? localStorage.getItem('search') : ''
   );
@@ -26,15 +26,19 @@ const MainPage = () => {
     setShowMore(data);
   };
   const onLog=(token)=>{
+    console.log("F")
     setIsLoggedIn(true)
+    localStorage.setItem("loggedIn", true);
   }
   const logOut=()=>{
+    console.log("h")
     setIsLoggedIn(false)
+    localStorage.setItem("loggedIn", false);
   }
   return (
     <div className="container">
       {!isLoggedIn ? (
-        <LoginPage onLog={onLog}/>
+        <LoginPage onLog={onLog} fail={logOut}/>
       ) : (
         <div>
           <img className={css.logo} src={logo} alt="logo" />

@@ -1,6 +1,6 @@
 
 import FacebookLogin from '@greatsumini/react-facebook-login';
-const LoginPage = ({onLog}) => {
+const LoginPage = ({onLog,fail}) => {
   function responseFacebook(response) {
     if(response.accessToken)
     {
@@ -14,15 +14,13 @@ const LoginPage = ({onLog}) => {
      <>
      <FacebookLogin
         appId="3374472702772600"
-        fields=""
-        autoLoad={true}
-        
         onSuccess={responseFacebook}
         onFail={(error) => {
           console.log('Login Failed!', error);
         }}
         onProfileSuccess={(response) => {
           console.log('Get Profile Success!', response);
+          fail()
         }}
       />
    <div>Login to my app</div>

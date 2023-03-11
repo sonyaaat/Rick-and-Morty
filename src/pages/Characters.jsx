@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import CharactersList from 'components/CharactersList/CharactersList';
 import { getAllCharacters } from 'api';
 import Spinner from 'components/Spinner/Spinner';
@@ -29,7 +28,7 @@ const Characters = ({ search, page, onData }) => {
         setCharacters([])
         onData(false)
       });
-  }, [search, page]);
+  }, [search, page,characters,onData]);
   return (
     <>{characters?
       <CharactersList characters={characters} page={page} />:

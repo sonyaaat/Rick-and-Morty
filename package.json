@@ -2,7 +2,7 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sonyaaat.github.io//RickAndMorty/",
+  "homepage": "https://sonyaaat.github.io/Rick-and-Morty/",
   "dependencies": {
     "@greatsumini/react-facebook-login": "^3.3.2",
     "@testing-library/jest-dom": "^5.16.3",

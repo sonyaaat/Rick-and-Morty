@@ -1,5 +1,5 @@
 
-import FacebookLogin from 'react-facebook-login';
+import FacebookLogin from ' @greatsumini/react-facebook-login';
 const LoginPage = ({onLog}) => {
   function responseFacebook(response) {
     if(response.accessToken)

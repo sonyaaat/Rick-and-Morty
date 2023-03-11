@@ -4,13 +4,11 @@ import { getAllCharacters } from 'api';
 import Spinner from 'components/Spinner/Spinner';
 const Characters = ({ search, page, onData }) => {
   const [characters, setCharacters] = useState([]);
-  const prev=characters
+
   useEffect(() => {
     getAllCharacters(search, page)
       .then(res => {
-        console.log(res.data.info.count);
-        console.log(1, characters);
-        console.log(2, res.data.results);
+        
 
         const inAlphabeticalOrder = res.data.results.sort((first, second) =>
           first.name.localeCompare(second.name)
@@ -21,13 +19,13 @@ const Characters = ({ search, page, onData }) => {
           return;
         }
 
-        setCharacters([...prev, ...inAlphabeticalOrder]);
+        setCharacters(prevCharacters => [...prevCharacters, ...inAlphabeticalOrder]);
       })
       .catch(error => {
         setCharacters([])
         onData(false)
       });
-  }, [search, page]);
+  }, [search, page,onData]);
   return (
     <>{characters?
       <CharactersList characters={characters} page={page} />:

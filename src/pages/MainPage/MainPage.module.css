@@ -1,0 +1,67 @@
+
+.logo {
+  width: 600px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+.input{
+  outline: none;
+    width: 100%;
+    padding: 16px;
+    padding-left: 48px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+border-radius: 8px;
+margin-bottom: 61px;
+}
+.input__box{
+    position: relative;
+   
+}
+.svg{
+    
+    width: 24px;
+    height: 24px;
+    left: 16px;
+    top: 10px;
+    
+}
+.search__btn{
+    cursor: pointer;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 13px;
+    top: 10px;
+    background-color: white;
+    outline: none;
+    border: none;
+}
+/* .input:focus.use{
+    fill:red;
+
+} */
+.use{
+    fill:#0000008A;
+}
+.load{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    background-color: #4CAF50; /* Green */
+    border: 5px solid #4CAF50 ;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.load:hover{
+    border: 5px solid #114c13 ;
+}

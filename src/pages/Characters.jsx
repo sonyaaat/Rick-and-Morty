@@ -22,13 +22,12 @@ const Characters = ({ search, page, onData }) => {
         }
 
         setCharacters([...characters, ...inAlphabeticalOrder]);
-        console.log(3, characters);
       })
       .catch(error => {
         setCharacters([])
         onData(false)
       });
-  }, [search, page,characters,onData]);
+  }, [search, page]);
   return (
     <>{characters?
       <CharactersList characters={characters} page={page} />:

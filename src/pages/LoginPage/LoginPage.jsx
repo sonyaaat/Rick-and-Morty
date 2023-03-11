@@ -1,5 +1,5 @@
 
-import FacebookLogin from ' @greatsumini/react-facebook-login';
+import FacebookLogin from '@greatsumini/react-facebook-login';
 const LoginPage = ({onLog}) => {
   function responseFacebook(response) {
     if(response.accessToken)
@@ -16,7 +16,14 @@ const LoginPage = ({onLog}) => {
         appId="3374472702772600"
         fields=""
         autoLoad={true}
-        callback={responseFacebook}
+        
+        onSuccess={responseFacebook}
+        onFail={(error) => {
+          console.log('Login Failed!', error);
+        }}
+        onProfileSuccess={(response) => {
+          console.log('Get Profile Success!', response);
+        }}
       />
    <div>Login to my app</div>
    <div>via facebook</div>

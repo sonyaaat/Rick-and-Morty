@@ -16,11 +16,12 @@ const LoginPage = ({onLog,fail}) => {
         appId="3374472702772600"
         onSuccess={responseFacebook}
         onFail={(error) => {
+          fail()
           console.log('Login Failed!', error);
         }}
         onProfileSuccess={(response) => {
           console.log('Get Profile Success!', response);
-          fail()
+          
         }}
       />
    <div>Login to my app</div>

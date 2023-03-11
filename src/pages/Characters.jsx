@@ -4,7 +4,7 @@ import { getAllCharacters } from 'api';
 import Spinner from 'components/Spinner/Spinner';
 const Characters = ({ search, page, onData }) => {
   const [characters, setCharacters] = useState([]);
-
+  const prev=characters
   useEffect(() => {
     getAllCharacters(search, page)
       .then(res => {
@@ -21,7 +21,7 @@ const Characters = ({ search, page, onData }) => {
           return;
         }
 
-        setCharacters([...characters, ...inAlphabeticalOrder]);
+        setCharacters([...prev, ...inAlphabeticalOrder]);
       })
       .catch(error => {
         setCharacters([])

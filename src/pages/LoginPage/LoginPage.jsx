@@ -1,5 +1,4 @@
-import { LoginSocialFacebook } from 'reactjs-social-login';
-import { FacebookLoginButton } from 'react-social-login-buttons';
+
 import FacebookLogin from 'react-facebook-login';
 const LoginPage = ({onLog}) => {
   function responseFacebook(response) {

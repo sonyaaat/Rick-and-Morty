@@ -26,20 +26,16 @@ const MainPage = () => {
     setShowMore(data);
   };
   const onLog=(token)=>{
-    console.log("J")
     setIsLoggedIn(true)
     localStorage.setItem("loggedIn", true);
     
   }
   const logOut=(evt)=>{
-    console.log("out")
     setIsLoggedIn("false")
     localStorage.setItem("loggedIn", "false");
     localStorage.removeItem("loggedIn");
   }
-  console.log(isLoggedIn)
   
-  console.log(localStorage.getItem('loggedIn'))
   return (
     <div className="container">
       {isLoggedIn==="false" ? (

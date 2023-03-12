@@ -5,7 +5,6 @@ import css from '../LoginPage/LoginPage.module.css';
 const LoginPage = ({ onLog, fail }) => {
   function responseFacebook(response) {
     if (response.accessToken) {
-      console.log(response.accessToken);
       onLog(response.accessToken);
     }
   }
@@ -23,8 +22,8 @@ const LoginPage = ({ onLog, fail }) => {
         appId="3374472702772600"
         onSuccess={responseFacebook}
         onFail={error => {
+          console.log(error)
           fail();
-          console.log('Login Failed!', error);
         }}
         onProfileSuccess={response => {
           console.log('Get Profile Success!', response);

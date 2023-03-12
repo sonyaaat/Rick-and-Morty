@@ -1,7 +1,6 @@
 import css from '../CharactersList/CharactersList.module.css';
 import { Link } from 'react-router-dom';
 const CharactersList = ({ characters }) => {
-  console.log('Char', characters);
   return (
     <ul className={css.list}>
       {characters && characters.length>0?

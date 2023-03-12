@@ -14,7 +14,6 @@ const CharacterDetails = () => {
       const data = await axios.get(
         `https://rickandmortyapi.com/api/character/${id}`
       );
-      console.log(data);
       setCharacter(data.data);
     };
     fetch();

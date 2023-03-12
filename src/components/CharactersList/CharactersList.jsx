@@ -5,8 +5,8 @@ const CharactersList = ({ characters }) => {
     <ul className={css.list}>
       {characters && characters.length>0?
         characters.map(character => (
-          <Link to={`${character.id}`}>
-            <li key={character.image}>
+          <Link to={`${character.id}`} key={character.id}>
+            <li key={character.id}>
               <div className={css.box}>
                 <img
                   alt={character.image}

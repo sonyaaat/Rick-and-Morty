@@ -5,7 +5,7 @@ import sprite from '../../img/sprite.svg';
 import { useEffect, useState } from 'react';
 import LoginPage from 'pages/LoginPage/LoginPage';
 const MainPage = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('loggedIn') === true ? true:false);
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('loggedIn')||"false" );
   const [search, setSearch] = useState(
     localStorage.getItem('search') ? localStorage.getItem('search') : ''
   );
@@ -26,16 +26,23 @@ const MainPage = () => {
     setShowMore(data);
   };
   const onLog=(token)=>{
+    console.log("J")
     setIsLoggedIn(true)
     localStorage.setItem("loggedIn", true);
+    
   }
-  const logOut=()=>{
-    setIsLoggedIn(false)
-    localStorage.setItem("loggedIn", false);
+  const logOut=(evt)=>{
+    console.log("out")
+    setIsLoggedIn("false")
+    localStorage.setItem("loggedIn", "false");
+    localStorage.removeItem("loggedIn");
   }
+  console.log(isLoggedIn)
+  
+  console.log(localStorage.getItem('loggedIn'))
   return (
     <div className="container">
-      {!isLoggedIn ? (
+      {isLoggedIn==="false" ? (
         <LoginPage onLog={onLog} fail={logOut}/>
       ) : (
         <div>

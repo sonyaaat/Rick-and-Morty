@@ -1,0 +1,45 @@
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+@media screen and (max-width:780px) {
+    .logo{
+        width: 100%;
+    }
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    background-color: blue;
+    height:  50px;
+    width: 150px;
+
+    color: white;
+    border:none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+.text{
+text-align: center;
+margin-top: 20px;
+font-size: 30px;
+color: rgb(74, 71, 71);
+}
+.svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    width: 50px;
+    height: 50px;
+    fill: gray;
+}

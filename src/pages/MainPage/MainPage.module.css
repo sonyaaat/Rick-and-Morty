@@ -7,6 +7,11 @@
   margin-right: auto;
   margin-bottom: 16px;
 }
+@media screen and (max-width:780px) {
+    .logo{
+        width: 100%;
+    }
+}
 .input{
   outline: none;
     width: 100%;
@@ -64,4 +69,18 @@ margin-bottom: 61px;
 }
 .load:hover{
     border: 5px solid #114c13 ;
+}
+.logout{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+
+    background-color:aquamarine;
+    border-radius: 5px;
+    border:1px solid blue;
 }

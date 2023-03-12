@@ -35,12 +35,14 @@ const MainPage = () => {
     setIsLoggedIn(false)
     localStorage.setItem("loggedIn", false);
   }
+  console.log(isLoggedIn)
   return (
     <div className="container">
       {!isLoggedIn ? (
         <LoginPage onLog={onLog} fail={logOut}/>
       ) : (
         <div>
+          <button className={css.logout} onClick={logOut}>Log out</button>
           <img className={css.logo} src={logo} alt="logo" />
           <div className={css.input__box}>
             <input
@@ -50,7 +52,6 @@ const MainPage = () => {
               value={search}
               onChange={onChange}
             />
-            <button onClick={logOut}>Log out</button>
             <button className={css.search__btn}>
               <svg className={css.svg}>
                 <use href={`${sprite}#icon-find`} className={css.use}></use>
